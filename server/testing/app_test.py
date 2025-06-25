@@ -124,7 +124,7 @@ class TestApp:
             db.session.add(restaurant)
             db.session.commit()
 
-            # delete if existing in case price differs
+            
             restaurant_pizza = RestaurantPizza.query.filter_by(
                 pizza_id=pizza.id, restaurant_id=restaurant.id).one_or_none()
             if restaurant_pizza:
